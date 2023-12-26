@@ -12,6 +12,14 @@ Date: 2018-03-08
 import math
 
 
+"""
+@property：
+只读属性： 使用 @property 装饰的方法可以像访问属性一样被访问，但不能被修改。在这个例子中，外部代码可以通过 circle.radius 来访问半径值，但不能通过 circle.radius = new_radius 来修改半径值。
+
+封装实现细节： 将属性的获取方法封装在 @property 装饰的方法中，可以在后续修改类的内部实现而不影响外部代码。如果未来需要添加一些额外的逻辑来计算半径，只需修改 radius 方法而不需要改变外部代码。
+
+属性名和方法名一致： 使用 @property 装饰器可以使属性名和方法名保持一致，提高代码的可读性。在这个例子中，半径的获取通过 circle.radius 而不是 circle.get_radius()。
+"""
 class Circle(object):
 
     def __init__(self, radius):
@@ -34,7 +42,7 @@ class Circle(object):
         return math.pi * self._radius * self._radius
 
 
-if __name__ == '__main__':  
+if __name__ == '__main__':
     radius = float(input('请输入游泳池的半径: '))
     small = Circle(radius)
     big = Circle(radius + 3)

@@ -40,7 +40,16 @@ class Clock(object):
     def show(self):
         return '%02d:%02d:%02d' % (self._hour, self._minute, self._second)
 
+"""
+1. *args（位置参数）：
+*args 用于传递不定数量的位置参数。在函数定义时，使用*args表示可以接受任意数量的位置参数。
+参数前的星号 * 将参数收集成一个元组（tuple）。
 
+**kwargs（关键字参数）：
+**kwargs 用于传递不定数量的关键字参数。在函数定义时，使用**kwargs表示可以接受任意数量的关键字参数。
+参数前的双星号 ** 将参数收集成一个字典（dictionary）。
+
+"""
 if __name__ == '__main__':
     # clock = Clock(hour=10, minute=5, second=58)
     clock = Clock()

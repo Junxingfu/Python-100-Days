@@ -13,16 +13,10 @@ def main():
     test._Test__bar()
     print(test._Test__foo)
 
-
 """
-test._Test__bar()：调用对象的私有方法 __bar。在Python中，
-私有方法可以通过 _ClassName__methodName 的方式访问，
-这里 __bar 变成了 _Test__bar。
-
-print(test._Test__foo)：试图访问对象的私有属性 __foo。
-同样，私有属性可以通过 _ClassName__attributeName 的方式访问，
-这里 __foo 变成了 _Test__foo。
+1. 名字重整（Name Mangling）：
+在类的外部，可以使用 _类名__私有变量名 的形式来访问私有变量
+2.提供公共方法来访问私有变量。
 """
-
 if __name__ == "__main__":
     main()

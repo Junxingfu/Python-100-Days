@@ -20,7 +20,15 @@ def main():
     stu1 = Student('骆昊')
     stu1.study('Python程序设计')
 
+"""
+The first argument to type is the name of the class, which is 'Student' in this case.
 
+The second argument is a tuple of base classes. 
+In this case, there's only one base class, which is object.
+
+The third argument is a dictionary that defines the attributes and methods of the class. 
+It includes __init__ and study methods.
+"""
 if __name__ == '__main__':
     main()  
 """

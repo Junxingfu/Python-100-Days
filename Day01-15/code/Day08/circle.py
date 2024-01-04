@@ -41,8 +41,10 @@ class Circle(object):
     def area(self):
         return math.pi * self._radius * self._radius
 
-
-if __name__ == '__main__':
+""" 
+方法上使用@property 时是属性；否则是方法调用：big.perimeter()
+"""
+if __name__ == '__main__':  
     radius = float(input('请输入游泳池的半径: '))
     small = Circle(radius)
     big = Circle(radius + 3)

@@ -24,6 +24,7 @@ def reverse_str3(str):
     # 不应该使用不变字符串做字符串连接操作 因为会产生很多无用字符串对象
     rstr = StringIO()
     str_len = len(str)
+    #range(start,stop,step)
     for index in range(str_len - 1, -1, -1):
         rstr.write(str[index])
     return rstr.getvalue()
@@ -33,6 +34,10 @@ def reverse_str4(str):
     return ''.join(str[index] for index in range(len(str) - 1, -1, -1))
 
 
+"""
+该算法不对，偶数时结果不正确
+主要可以看zip生成元组
+"""
 def reverse_str5(str):
     # 将字符串处理成列表
     str_list = list(str)
@@ -46,14 +51,4 @@ def reverse_str5(str):
 
 
 if __name__ == '__main__':
-    str = 'I love Python'
-    print(reverse_str1(str))
-    print(str)
-    print(reverse_str2(str))
-    print(str)
-    print(reverse_str3(str))
-    print(str)
-    print(reverse_str4(str))
-    print(str)
-    print(reverse_str5(str))
-    print(str)
+    test('ab', 'cde')

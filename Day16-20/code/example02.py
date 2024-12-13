@@ -1,4 +1,8 @@
 """
+fjx
+1. 对于json（字典类型），x['gender']或者x.get('gender')均可以；前者没有或报错keyError,后者没有返回None
+2. items = origin_items[:]，这是浅拷贝，切片操作语法 [start:stop:step]， [:] 这种最简形式相当于 [0:len(sequence):1]
+
 排序 - 冒泡排序、选择排序、归并排序、快速排序
 冒泡排序 - O(n ** 2)：两两比较，大的下沉
 35, 97, 12, 68, 55, 73, 81, 40

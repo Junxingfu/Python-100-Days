@@ -1,4 +1,16 @@
 """
+fjx
+1. def seq_search(items: list, elem) -> int:
+其中items类型类型是list，返回值类型是int
+
+2. for index, item in enumerate(items):
+其中enumerate函数遍历时，会遍历index和元素item
+
+3. start, end = 0, len(items) - 1
+这是多元赋值（并行赋值）
+
+4. pyplot.legend(legends)这里的legends不支持中文
+
 查找 - 顺序查找和二分查找
 算法：解决问题的方法（步骤）
 评价一个算法的好坏主要有两个指标：渐近时间复杂度和渐近空间复杂度，通常一个算法很难做到时间复杂度和空间复杂度都很低（因为时间和空间是不可调和的矛盾）
